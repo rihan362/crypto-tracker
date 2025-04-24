@@ -1,0 +1,119 @@
+.tableContainer {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .cryptoTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  
+  .cryptoTable th, .cryptoTable td {
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .cryptoTable th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+  }
+  
+  .cryptoTable tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .nameCell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left !important;
+  }
+  
+  .logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  
+  .symbol {
+    color: #6c757d;
+    font-size: 0.8em;
+  }
+  
+  .positive {
+    color: #16c784;
+  }
+  
+  .negative {
+    color: #ea3943;
+  }
+  
+  .chartContainer {
+    width: 100px;
+    height: 50px;
+  }
+  
+  @media (max-width: 1200px) {
+    .cryptoTable {
+      font-size: 0.8rem;
+    }
+    
+    .cryptoTable th, .cryptoTable td {
+      padding: 8px 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cryptoTable {
+      display: block;
+    }
+    
+    .cryptoTable thead {
+      display: none;
+    }
+    
+    .cryptoTable tbody {
+      display: block;
+    }
+    
+    .cryptoTable tr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+    
+    .cryptoTable td {
+      display: flex;
+      justify-content: space-between;
+      text-align: left !important;
+      padding: 8px 12px;
+      border-bottom: none;
+    }
+    
+    .cryptoTable td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      margin-right: 10px;
+      color: #6c757d;
+    }
+    
+    .nameCell {
+      grid-column: 1 / -1;
+      background-color: #f8f9fa;
+      border-radius: 8px 8px 0 0;
+    }
+    
+    .chartContainer {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+  }
